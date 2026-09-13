@@ -8,12 +8,10 @@ public class WarehouseInventoryBalancer {
         int totalA = 0;
         int totalB = 0;
 
-        // Calculate total of Section A
         for (int i = 0; i < sectionA.length; i++) {
             totalA += sectionA[i];
         }
 
-        // Calculate total of Section B
         for (int i = 0; i < sectionB.length; i++) {
             totalB += sectionB[i];
         }
@@ -26,12 +24,10 @@ public class WarehouseInventoryBalancer {
             status = "Not Balanced";
         }
 
-        // Find highest quantity
         int highest = sectionA[0];
         String highestSection = "Section A";
         int highestIndex = 0;
 
-        // Check Section A
         for (int i = 1; i < sectionA.length; i++) {
 
             if (sectionA[i] > highest) {
@@ -42,7 +38,6 @@ public class WarehouseInventoryBalancer {
             }
         }
 
-        // Check Section B
         for (int i = 0; i < sectionB.length; i++) {
 
             if (sectionB[i] > highest) {
